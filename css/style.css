@@ -1,0 +1,770 @@
+/* ========================
+   MENU / TOPO / TOPOBAR
+======================== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #009688;
+    padding: 10px 20px;
+    color: white;
+}
+
+.topbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* deixa os itens na horizontal */
+  gap: 20px;
+}
+
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.topbar-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.topbar-right a:hover {
+  text-decoration: underline;
+}
+
+.welcome-text {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.btn-entrar,
+.logout {
+    background-color: #00796b;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-entrar:hover,
+.logout:hover {
+    background-color: #004d40;
+}
+
+.profile-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.profile-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* ========================
+   HERO IMAGE (HOME)
+======================== */
+.hero-image {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+/* ========================
+   BANNERS (AUTOCUIDADO E VOLUNTARIADO)
+======================== */
+.banner-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-content {
+    color: white;
+}
+
+.banner-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+.btn-banner {
+    background-color: #009688;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-banner:hover {
+    background-color: #00796b;
+}
+
+/* ========================
+   CARDS (PROJETOS)
+======================== */
+.projetos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.projetos h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.projetos .subtitulo {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-projeto {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-projeto h3 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card-projeto p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-projeto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #009688;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-projeto:hover {
+    background-color: #00796b;
+}
+
+/* ========================
+   PÁGINA SOBRE NÓS
+======================== */
+/* ========================
+   TOPBAR
+======================== */
+.topbar {
+    background-color: #009688;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.topbar .main-menu ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topbar .main-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.topbar .main-menu a:hover {
+    color: #ffd700;
+}
+
+/* Responsividade da topbar */
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .topbar .main-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ========================
+   SOBRE NÓS
+======================== */
+.sobre-nos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre-nos h2 {
+    color: #2d89e5;
+    margin-bottom: 15px;
+}
+
+.mvv {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.mvv-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mvv-item {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.mvv-item h3 {
+    color: #2d89e5;
+    margin-bottom: 10px;
+}
+
+.mvv-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mvv-item li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* ========================
+   BOTÃO CTA (SOBRE NÓS)
+======================== */
+.cta {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #2d89e5;
+    color: white;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    background-color: white;
+    color: #2d89e5;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ========================
+   RODAPÉ
+======================== */
+.footer {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* ========================
+   RESPONSIVIDADE BÁSICA
+======================== */
+@media (max-width: 768px) {
+    .cards-container,
+    .mvv-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-projeto,
+    .mvv-item {
+        width: 90%;
+        max-width: none;
+    }
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+    .topbar .main-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ========================
+   VOLUNTARIADO
+======================== */
+.voluntariado-intro {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.voluntariado-intro h1 {
+    color: #009688;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.voluntariado-intro p {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.voluntariado-lista {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.voluntariado-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    width: 320px;
+    text-align: left;
+}
+
+.voluntariado-item h2 {
+    color: #00796b;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.voluntariado-item p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.btn-voluntario {
+    background-color: #009688;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-voluntario:hover {
+    background-color: #00796b;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .voluntariado-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+    .voluntariado-item {
+        width: 90%;
+    }
+}
+
+/* ========================
+   AUTOCUIDADO
+======================== */
+.autocuidado-intro {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.autocuidado-intro p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.autocuidado-intro a {
+  color: #009688;
+  text-decoration: underline;
+}
+
+.dicas-praticas {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.dicas-praticas h2 {
+  color: #00796b;
+  margin-bottom: 20px;
+}
+
+.dicas-praticas ul {
+  list-style: disc inside;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ========================
+   VÍDEOS
+======================== */
+.videos {
+  max-width: 960px;
+  margin: 50px auto;
+}
+
+.videos h2 {
+  color: #00796b;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.video-item {
+  display: inline-block;
+  margin: 0 15px 25px;
+  text-align: center;
+  max-width: 320px;
+}
+
+.video-item iframe {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.video-item p {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.frases-motivacionais {
+  max-width: 700px;
+  margin: 60px auto 40px;
+  text-align: center;
+  font-style: italic;
+  color: #444;
+}
+
+.frases-motivacionais blockquote {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Responsividade para vídeos */
+@media (max-width: 768px) {
+  .video-item {
+    display: block;
+    margin: 0 auto 30px;
+  }
+}
+
+/* =========================================
+   LOGIN E CADASTRO - Cuidar+
+   ========================================= */
+
+/* Container geral */
+.login-container, .cadastro-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* Título */
+.login-container h2, .cadastro-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+/* Campos de formulário */
+.login-container input, .cadastro-container input,
+.login-container select, .cadastro-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.login-container input:focus, .cadastro-container input:focus,
+.login-container select:focus, .cadastro-container select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.4);
+}
+
+/* Botões */
+.login-container button, .cadastro-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover, .cadastro-container button:hover {
+    background-color: #2980b9;
+}
+
+/* Links auxiliares */
+.login-container p, .cadastro-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-container a, .cadastro-container a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.login-container a:hover, .cadastro-container a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens de erro ou sucesso */
+.msg-erro {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.msg-sucesso {
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* EDITAR-USUARIO */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 20px;
+    padding: 0;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Botão excluir conta - vermelho com destaque */
+form:nth-of-type(2) button[type="submit"] {
+    background-color: #e74c3c;
+    width: 100%;
+    margin-top: 10px;
+}
+
+form:nth-of-type(2) button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+p {
+    max-width: 400px;
+    font-weight: 600;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    max-width: 400px;
+    margin: 30px 0;
+    border: 0;
+    border-top: 1.5px solid #ddd;
+}
